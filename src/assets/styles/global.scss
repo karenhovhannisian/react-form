@@ -1,0 +1,43 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.base-loader{
+  @include absolute-center
+}
+
+.base-error{
+  @include absolute-center;
+  font-size: 24px;
+  color: $BASE-ERROR-COLOR;
+}
+
+.form-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 100px;
+  min-width: 280px;
+
+  &--label {
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+
+  &--error {
+    font-size: 12px;
+    text-align: right;
+    margin-right: 10px;
+    color: $BASE-ERROR-COLOR;
+  }
+
+  &--btn-block{
+    text-align: right;
+  }
+}

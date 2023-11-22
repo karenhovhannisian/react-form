@@ -1,0 +1,28 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.accordion-page-1 {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.accordion-page-2 {
+  .company-contact-form {
+    &--elements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .form-input {
+    flex: 1;
+  }
+}
+
+.accordion-page-2{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
