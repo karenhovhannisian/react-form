@@ -2,7 +2,6 @@ import * as yup from "yup";
 import { CompanyContactElementType } from "../types";
 
 export const companyContactValidationSchema = yup.object().shape({
-  companyId: yup.number().required("This field is required"),
   firstName: yup.string().required("This field is required"),
   lastName: yup.string().required("This field is required"),
   title: yup.string().required("This field is required"),
@@ -20,7 +19,6 @@ export const companyContactValidationSchema = yup.object().shape({
 });
 
 export const companyContactElements: Array<CompanyContactElementType> = [
-  { name: "companyId", title: "companyId", type: "number", multiline: false },
   { name: "firstName", title: "First Name", type: "string", multiline: false },
   { name: "lastName", title: "Last Name", type: "string", multiline: false },
   { name: "title", title: "title", type: "string", multiline: false },

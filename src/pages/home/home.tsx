@@ -8,7 +8,7 @@ import { useSetRecoilState } from "recoil";
 import { companyContactState } from "../../store/atoms/company-contact.atom";
 
 const Home = () => {
-  const { isLoading, data, isError, error, isFetching } = useGetUsersData();
+  const { isLoading, data, error } = useGetUsersData();
 
   const setCompanyContact = useSetRecoilState(companyContactState);
 
@@ -20,7 +20,21 @@ const Home = () => {
   //   };
 
   useEffect(() => {
-    // setCompanyContact();
+    data &&
+      setCompanyContact({
+        companyId: data.id,
+        firstName: "",
+        lastName: "",
+        email: "",
+        title: data.name || "",
+        phone: data.phone || "",
+        address: data.street_address || "",
+        city: data.city || "",
+        state: data.state || "",
+        country: data.country || "",
+        linkedinUrl: data.linkedin_url || "",
+        notes: null,
+      });
   }, [data, setCompanyContact]);
 
   if (isLoading) {

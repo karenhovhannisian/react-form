@@ -7,7 +7,7 @@ export type AccordionOptionsType = {
 };
 
 export type CompanyContactType = {
-  companyId: number;
+  companyId?: number;
   firstName: string;
   lastName: string;
   title: string;

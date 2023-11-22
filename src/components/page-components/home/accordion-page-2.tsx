@@ -12,9 +12,16 @@ import {
 import { TextField } from "@mui/material";
 import { companyContactState } from "../../../store/atoms/company-contact.atom";
 import { useRecoilValue } from "recoil";
+import { useCreateCompanyContact } from "../../../api/users-api";
 
 const AccordionPage2 = () => {
   const companyContact = useRecoilValue(companyContactState);
+
+  const onSuccess = () => {};
+
+  const onError = () => {};
+
+  const { mutate } = useCreateCompanyContact(onSuccess, onError);
 
   const {
     handleSubmit,
@@ -27,7 +34,7 @@ const AccordionPage2 = () => {
   });
 
   const onHandleFormSubmit = (formData: CompanyContactType) => {
-    console.log(formData, "formData");
+    mutate(formData);
   };
 
   useEffect(() => {
