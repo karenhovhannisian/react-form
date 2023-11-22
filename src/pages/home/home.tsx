@@ -45,13 +45,13 @@ const Home = () => {
     );
   }
 
-  if (error) {
-    return (
-      <div className={"base-error"}>
-        <p>{error?.message}</p>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className={"base-error"}>
+  //       <p>{error?.message}</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className={"home"}>
