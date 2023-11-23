@@ -1,0 +1,22 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+
+.header {
+  height: 60px;
+  padding: 10px;
+  border-bottom: 1px solid $BASE_GRAY_COLOR_2;
+  background-color: #000000;
+
+  &--menu {
+    height: 100%;
+    @include flex-center;
+    gap: 20px;
+
+    a {
+      &:hover {
+        color: #64a9e7;
+      }
+    }
+  }
+}

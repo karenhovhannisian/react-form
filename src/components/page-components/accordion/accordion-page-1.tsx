@@ -1,5 +1,5 @@
 import React from "react";
-import "./accordion=page.scss";
+import "./accordion-page.scss";
 import { Button, TextField } from "@mui/material";
 
 const AccordionPage1 = () => {

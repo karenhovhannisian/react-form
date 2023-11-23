@@ -7,11 +7,19 @@
   box-sizing: border-box;
 }
 
-.base-loader{
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.base-loader {
   @include absolute-center
 }
 
-.base-error{
+.base-error {
   @include absolute-center;
   font-size: 24px;
   color: $BASE-ERROR-COLOR;
@@ -37,7 +45,15 @@
     color: $BASE-ERROR-COLOR;
   }
 
-  &--btn-block{
+  &--btn-block {
     text-align: right;
   }
+}
+
+.active {
+  color: $BASE_BLUE_COLOR;
+}
+
+.passive {
+  color: $BASE-WHITE-COLOR;
 }

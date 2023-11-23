@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { request } from "../config/axios.config";
-import { CompanyContactType } from "../pages/home/types";
+import { CompanyContactType } from "../ts/types/company";
 
 const fetchUsers = () => {
   return request({
@@ -18,7 +18,7 @@ export const createCompanyContactRequest = (data: CompanyContactType) => {
 
 export const useGetUsersData = () => {
   return useQuery({
-    queryKey: ["company"],
+    queryKey: ["company.ts"],
     queryFn: fetchUsers,
   });
 };

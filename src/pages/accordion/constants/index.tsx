@@ -1,8 +1,9 @@
 import { AccordionOptionsType } from "../types";
 import { v4 as uuid } from "uuid";
-import AccordionPage1 from "../../../components/page-components/home/accordion-page-1";
-import AccordionPage2 from "../../../components/page-components/home/accordion-page-2";
-import AccordionPage3 from "../../../components/page-components/home/accordion-page-3";
+import AccordionPage1 from "../../../components/page-components/accordion/accordion-page-1";
+import AccordionPage2 from "../../../components/page-components/accordion/accordion-page-2";
+import AccordionPage3 from "../../../components/page-components/accordion/accordion-page-3";
+
 const accordionOptions: Array<AccordionOptionsType> = [
   {
     id: uuid(),
