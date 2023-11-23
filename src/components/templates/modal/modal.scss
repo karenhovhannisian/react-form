@@ -1,0 +1,25 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.modal {
+  @include absolute-center;
+  min-width: 400px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 2px;
+  background-color: $BASE-WHITE-COLOR;
+  outline: none;
+  &--content{
+    text-align: center;
+    padding: 20px;
+  }
+  &--title{
+    font-size: 24px;
+    color: $BASE_BLUE_COLOR;
+  }
+  &--btn{
+    display: inline-block;
+    margin: 20px 0;
+    color: $BASE_BLUE_COLOR;
+  }
+}

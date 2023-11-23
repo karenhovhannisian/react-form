@@ -1,0 +1,7 @@
+@import "src/assets/styles/mixins";
+
+
+.not-found-page{
+  @include absolute-center;
+  text-align: center;
+}

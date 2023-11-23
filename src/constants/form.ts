@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { CompanyContactElementType } from "../types";
+import { CompanyContactElementType } from "../ts/types/company";
 
 export const companyContactValidationSchema = yup.object().shape({
   firstName: yup.string().required("This field is required"),

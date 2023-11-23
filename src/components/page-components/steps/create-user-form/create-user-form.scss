@@ -1,0 +1,32 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.create-user-form {
+  &--inputs-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  &--btn-block {
+    @include flex-center-space-between;
+
+    &--form-btns {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .company-contact-form {
+    &--elements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .form-input {
+    flex: calc(50% - 10px)
+  }
+
+}

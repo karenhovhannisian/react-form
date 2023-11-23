@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { CompanyContactType } from "../../pages/home/types";
+import { CompanyContactType } from "../../ts/types/company";
 
 export const companyContactState = atom({
   key: "board",

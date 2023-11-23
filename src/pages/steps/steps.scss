@@ -1,0 +1,15 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/variables";
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  &--pages {
+    width: 50%;
+    margin-top: 40px;
+    flex: 1;
+  }
+}

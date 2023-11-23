@@ -8,6 +8,10 @@
 }
 
 .accordion-page-2 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
   .company-contact-form {
     &--elements {
       display: flex;
@@ -17,12 +21,7 @@
   }
 
   .form-input {
-    flex: 1;
+    flex: calc(50% - 10px)
   }
 }
 
-.accordion-page-2{
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-}

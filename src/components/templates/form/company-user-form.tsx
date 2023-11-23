@@ -1,23 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import {
-  CompanyContactElementType,
-  CompanyContactType,
-} from "../../../pages/home/types";
 import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
-import {
-  companyContactElements,
-  companyContactValidationSchema,
-} from "../../../pages/home/constants/form";
 import { TextField } from "@mui/material";
 import { companyContactState } from "../../../store/atoms/company-contact.atom";
 import { useRecoilValue } from "recoil";
 import { useCreateCompanyContact } from "../../../api/users-api";
+import {
+  companyContactElements,
+  companyContactValidationSchema,
+} from "../../../constants/form";
+import {
+  CompanyContactElementType,
+  CompanyContactType,
+} from "../../../ts/types/company";
+import Modal from "../modal/modal";
+import { useNavigate } from "react-router-dom";
 
-const AccordionPage2 = () => {
+const CompanyUserForm = () => {
   const companyContact = useRecoilValue(companyContactState);
+  const navigate = useNavigate();
 
-  const onSuccess = () => {};
+  const [open, setOpen] = useState<boolean>(false);
+
+  const onSuccess = () => {
+    setOpen(true);
+  };
 
   const onError = () => {};
 
@@ -37,12 +44,18 @@ const AccordionPage2 = () => {
     mutate(formData);
   };
 
+  const onHandleClose = () => {
+    setOpen(false);
+    navigate("/");
+  };
+
   useEffect(() => {
     reset(companyContact);
   }, [companyContact, reset]);
 
   return (
-    <div className={"accordion-page-2"}>
+    <>
+      <Modal open={open} onHandleClose={onHandleClose} />
       <form
         id="company-contact-form"
         className={"company-contact-form"}
@@ -77,8 +90,8 @@ const AccordionPage2 = () => {
           )}
         </div>
       </form>
-    </div>
+    </>
   );
 };
 
-export default AccordionPage2;
+export default CompanyUserForm;
